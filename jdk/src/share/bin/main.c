@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1995, 2012, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1995, 2012, 2023, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -71,6 +71,15 @@
 #endif  /* _M_AMD64 */
 #endif  /* _MSC_VER > 1400 && _MSC_VER < 1600 */
 #endif  /* _MSC_VER */
+
+#ifdef MC_ENTRY_POINT
+
+// https://docs.nvidia.com/gameworks/content/technologies/desktop/optimus.htm
+_declspec(dllexport) DWORD NvOptimusEnablement = 0x00000001;
+// https://gpuopen.com/learn/amdpowerxpressrequesthighperformance
+_declspec(dllexport) DWORD AmdPowerXpressRequestHighPerformance = 0x00000001;
+
+#endif
 
 /*
  * Entry point.
