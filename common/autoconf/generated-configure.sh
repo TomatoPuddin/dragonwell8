@@ -4282,7 +4282,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 #
-# Copyright (c) 2011, 2018, Oracle and/or its affiliates. All rights reserved.
+# Copyright (c) 2011, 2018, 2023, Oracle and/or its affiliates. All rights reserved.
 # DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
 #
 # This code is free software; you can redistribute it and/or modify it
@@ -4996,7 +4996,7 @@ VS_SDK_PLATFORM_NAME_2022=
 #CUSTOM_AUTOCONF_INCLUDE
 
 # Do not change or remove the following line, it is needed for consistency checks:
-DATE_WHEN_GENERATED=1684574512
+DATE_WHEN_GENERATED=1684576093
 
 ###############################################################################
 #
@@ -44516,10 +44516,10 @@ printf "%s\n" "$ac_cv_c_bigendian" >&6; }
       C_O_FLAG_NORM="-O2"
       C_O_FLAG_NONE=""
     elif test "x$TOOLCHAIN_TYPE" = xmicrosoft; then
-      C_O_FLAG_HIGHEST="-O2"
-      C_O_FLAG_HI="-O1"
-      C_O_FLAG_NORM="-O1"
-      C_O_FLAG_NONE="-Od"
+      C_O_FLAG_HIGHEST="/O2 /arch:AVX2 /GL"
+      C_O_FLAG_HI="/O2 /arch:AVX2"
+      C_O_FLAG_NORM="/O1 /arch:AVX2"
+      C_O_FLAG_NONE="/Od /arch:AVX2"
     fi
     CXX_O_FLAG_HIGHEST="$C_O_FLAG_HIGHEST"
     CXX_O_FLAG_HI="$C_O_FLAG_HI"
