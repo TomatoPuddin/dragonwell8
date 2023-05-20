@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2000, 2016, 2023, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -1864,21 +1864,21 @@ JNINativeMethod fence_methods[] = {
 #define STE "Ljava/lang/StackTraceElement;"
 
 JNINativeMethod coroutine_support_methods[] = {
-    {CC"switchTo",                CC"("COBA COBA")V", FN_PTR(CoroutineSupport_switchTo)},
-    {CC"switchToAndTerminate",    CC"("COBA COBA")V", FN_PTR(CoroutineSupport_switchToAndTerminate)},
-    {CC"switchToAndExit",         CC"("COBA COBA")V", FN_PTR(CoroutineSupport_switchToAndExit)},
+    {CC"switchTo",                CC"(" COBA COBA ")V", FN_PTR(CoroutineSupport_switchTo)},
+    {CC"switchToAndTerminate",    CC"(" COBA COBA ")V", FN_PTR(CoroutineSupport_switchToAndTerminate)},
+    {CC"switchToAndExit",         CC"(" COBA COBA ")V", FN_PTR(CoroutineSupport_switchToAndExit)},
     {CC"getNativeThreadCoroutine",CC"()J",            FN_PTR(CoroutineSupport_getNativeThreadCoroutine)},
-    {CC"createCoroutine",         CC"("COBA"J)J",     FN_PTR(CoroutineSupport_createCoroutine)},
+    {CC"createCoroutine",         CC"(" COBA "J)J",     FN_PTR(CoroutineSupport_createCoroutine)},
     {CC"testDisposableAndTryReleaseStack",
                                   CC"(J)Z",           FN_PTR(CoroutineSupport_testDisposableAndTryReleaseStack)},
-    {CC"cleanupCoroutine",        CC"()"COBA,         FN_PTR(CoroutineSupport_cleanupCoroutine)},
+    {CC"cleanupCoroutine",        CC"()" COBA ,         FN_PTR(CoroutineSupport_cleanupCoroutine)},
     {CC"setWispBooted",           CC"()V",            FN_PTR(CoroutineSupport_setWispBooted)},
     {CC"stealCoroutine",          CC"(J)Z",           FN_PTR(CoroutineSupport_stealCoroutine)},
-    {CC"getNextCoroutine",        CC"(J)"COR,         FN_PTR(CoroutineSupport_getNextCoroutine)},
+    {CC"getNextCoroutine",        CC"(J)" COR ,         FN_PTR(CoroutineSupport_getNextCoroutine)},
     {CC"moveCoroutine",           CC"(JJ)V",          FN_PTR(CoroutineSupport_moveCoroutine)},
-    {CC"markThreadCoroutine",     CC"(J"COBA")V",     FN_PTR(CoroutineSupport_markThreadCoroutine)},
+    {CC"markThreadCoroutine",     CC"(J" COBA ")V",     FN_PTR(CoroutineSupport_markThreadCoroutine)},
     {CC"shouldThrowException0", CC"(J)Z",           FN_PTR(CoroutineSupport_shouldThrowException0)},
-    {CC"getCoroutineStack",       CC"(J)["STE,        FN_PTR(CoroutineSupport_getCoroutineStack)},
+    {CC"getCoroutineStack",       CC"(J)[" STE ,        FN_PTR(CoroutineSupport_getCoroutineStack)},
     {CC"shouldThrowException0", CC"(J)Z",           FN_PTR(CoroutineSupport_shouldThrowException0)},
 };
 
