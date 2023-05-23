@@ -1,9 +1,10 @@
 Build for minecraft client 1.7.10-1.16.5
 - Automatically select the dedicated GPU on computers that have both integrated and dedicated GPUs.
-- Latest JFX8 integrated.
+- Latest JFX8 integrated (without media and webkit).
 - Build with Visual Studio 2022.
 - GL optimization.
 
+**Note: If you are running forge 1.16.5 on this jre, please update your forge version to 36.2.26 or newer, otherwise the game will crash.**
 ***
 
 ![Dragonwell Logo](https://raw.githubusercontent.com/wiki/dragonwell-project/dragonwell8/images/dragonwell_std_txt_horiz.png)
